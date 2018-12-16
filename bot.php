@@ -69,7 +69,7 @@ function shalat($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
-    $text = "Hallo semuanya... terimakasih telah mengudang Kura KeGrup ini. Silakan ketik 'key' tanpa tanda petik untuk mengetahui isi keyword dari Kura silakan dicoba ^_^";
+    $text = "Hallo semuanya... terimakasih telah mengudang Kura KeGrup ini. Silakan ketik 'key' tanpa tanda petik untuk mengetahui isi keyword dari Kura silakan dicoba...";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
