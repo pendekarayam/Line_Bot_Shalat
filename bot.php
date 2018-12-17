@@ -69,7 +69,7 @@ function shalat($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
-    $text = "Assalamualaikum Kakak, aku adalah bot jadwal shalat, silahkan ketik\n\n/shalat <nama tempat>\n\nnanti aku bakalan kasih tahu jam berapa waktunya shalat ^_^";
+    $text = "Hallo semuanya... terimakasih sudah mengundang Kura kegrup ini. Silakan ketik 'key' tanpa tanda petik untuk mengetahui isi keyword dari Kura silakan dicoba...";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -120,4 +120,43 @@ if (isset($balas)) {
 
     $client->replyMessage($balas);
 }
-?>
+function send($input, $rt){
+    $send = array(
+        'replyToken' => $rt,
+        'messages' => array(
+            array(
+                'type' => 'text',					
+                'text' => $input
+            )
+        )
+    );
+    return($send);
+}
+function jawabs(){
+    $list_jwb = array(
+		'Ya',
+		'Tidak',
+		'Bisa jadi',
+		'Mungkin',
+		'Tentu tidak',
+		'Coba tanya lagi',
+	        'Nanya mulu lu capek gue jawabnya',
+	        'gak tau emang gue dukun',
+		);
+    $jaws = array_rand($list_jwb);
+    $jawab = $list_jwb[$jaws];
+    return($jawab);
+}
+if($msg_type == 'text'){
+    $pesan_datang = strtolower($message['text']);
+    $filter = explode(' ', $pesan_datang);
+    if($filter[0] == 'apakah') {
+        $balas = send(jawabs(), $replyToken);
+    } else {}
+} else {}
+if(isset($balas)){
+    $client->replyMessage($balas); 
+    $result =  json_encode($balas);
+    file_put_contents($botname.'.json',$result);
+}
+
