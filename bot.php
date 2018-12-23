@@ -104,7 +104,7 @@ if($message['type']=='text') {
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => 'Makasih Kak Stikernya ^_^','Jangan spam stiker njir kalau spam cinta ga apa apa','Kenapa lu?','Yang ngirim stiker gue sumpahin matanya jadi dua!!!','Sekali lagi ngirim stiker gue lamar lu'										
+										'text' => 'Makasih Kak Stikernya ^_^','Jangan spam stiker njir kalau spam cinta ga apa apa','Kenapa lu?','Yang ngirim stiker gue sumpahin matanya jadi dua!!!','Sekali lagi ngirim stiker gue lamar lu',									
 						        'ret_' => random.choice(balas)
 
 									)
