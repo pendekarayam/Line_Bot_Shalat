@@ -9,8 +9,8 @@ Modified @ Farzain - zFz
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 
-$channelAccessToken = 'YOUR-CHANNEL-ACCESS-TOKEN'; //sesuaikan 
-$channelSecret = 'YOUR-CHANNEL-SECRET-CODE';//sesuaikan
+$channelAccessToken = 'qWvZ/h9OqqTEUgUjOfvjR9Tpgh4xdgFte+bRjL8oKA4BiLro65hWJ7+NL+x81D57mLUPL/E1P1FIL9Ti+JB+hTUEQwHKLZ0m0hXTbKPcMrJD0jiCFDmi0yPyTfPHWn9a7o+6tCI++v0wCi2OY39OQQdB04t89/1O/w1cDnyilFU='; //sesuaikan 
+$channelSecret = 'c7eb776a9a8d3439b1546a70005c57f2';//sesuaikan
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -69,7 +69,7 @@ function shalat($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
-    $text = "Assalamualaikum Kakak, aku adalah bot jadwal shalat, silahkan ketik\n\n/shalat <nama tempat>\n\nnanti aku bakalan kasih tahu jam berapa waktunya shalat ^_^";
+    $text = "Hallo semuanya terimakasih sudah mengundang Kura kegrup ini, Jika ingin mengetahui keyword Kura silakan ketik 'Key' tanpa tanda petik. Dan jika ingin mengetahui keyword Jadwal Shalat silakan ketik '/shalat <Nama Kota/Negara> contoh: /shalat Jakarta. Silakan dicoba...";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -104,8 +104,9 @@ if($message['type']=='text') {
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => 'Makasih Kak Stikernya ^_^'										
-									
+										'text' => 'Makasih Kak Stikernya ^_^','Jangan spam stiker njir kalau spam cinta ga apa apa','Kenapa lu?','Yang ngirim stiker gue sumpahin matanya jadi dua!!!','Sekali lagi ngirim stiker gue lamar lu'										
+						        'ret_' => random.choice(balas)
+
 									)
 							)
 						);
